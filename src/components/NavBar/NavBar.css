@@ -1,0 +1,10 @@
+ @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+ .div-nav{
+    display: flex;
+    background-color:#444;
+    height: 65px;
+    width: 100%;
+    color: white;
+}
+

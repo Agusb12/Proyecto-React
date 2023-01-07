@@ -1,0 +1,13 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  
+}
+
+.react{
+  margin: 10px auto;
+  color: #45bc;
+  border:solid 2px #65bc;
+  
+}
