@@ -1,16 +1,16 @@
 import './NavBar.css';
-import { FaAlignJustify } from "react-icons/fa";
-import React, { ReactDOM } from 'react';
+
+
  
-function  NavBar () {
+function  NavBar ({li1,li2,li3}) {
+  
     return(
         <nav className="div-nav">
                 <ul>
             <h1>PHONE FIXERS</h1>
-                    <li>Inicio</li>
-                    <li>Formulario</li>
-                    <li>Contacto</li>
-                
+                    <li>{li1}</li>
+                    <li>{li2}</li>
+                    <li>{li3}</li>                
             </ul>
         </nav>
     )
