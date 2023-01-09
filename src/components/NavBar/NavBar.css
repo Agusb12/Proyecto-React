@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Moon+Dance&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Sofia+Sans+Condensed:wght@100&display=swap');
- 
+@import url('https://fonts.googleapis.com/css2?family=Oswald&family=Sofia+Sans+Condensed:wght@100&display=swap');
 .div-nav ul{
     display: flex;
     justify-content: space-around;
@@ -8,11 +8,20 @@
     list-style: none;
     font-family: 'Sofia Sans Condensed', sans-serif;
     font-weight: bold;
-    box-shadow: 1px 1px 1px black;
+    box-shadow: 1px 1px 5px black;
     margin: 10px 5px;
+    align-items: center;
  }
 
  .div-nav h1{
    font-weight: bolder;
+   box-shadow: 5px 5px 5px black;
+   font-family: 'Oswald', sans-serif;
+   color: #aaa;
+ }
+
+ .div-nav ul li{
+   list-style: georgian;
+   
  }
 

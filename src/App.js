@@ -2,6 +2,7 @@
 import './App.css';
 import NavBar from './components/NavBar/NavBar';
 import MainPart from './components/MainPart/MainPart';
+
 function App() {
   return (
     <div className="App">

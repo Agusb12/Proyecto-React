@@ -1,7 +1,5 @@
 import './NavBar.css';
 
-
- 
 function  NavBar ({li1,li2,li3}) {
   
     return(
