@@ -1,10 +1,18 @@
- @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
-
- .div-nav{
+@import url('https://fonts.googleapis.com/css2?family=Moon+Dance&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sofia+Sans+Condensed:wght@100&display=swap');
+ 
+.div-nav ul{
     display: flex;
-    background-color:#444;
+    justify-content: space-around;
     height: 65px;
-    width: 100%;
-    color: white;
-}
+    list-style: none;
+    font-family: 'Sofia Sans Condensed', sans-serif;
+    font-weight: bold;
+    box-shadow: 1px 1px 1px black;
+    margin: 10px;
+ }
+
+ .div-nav h1{
+   font-weight: bolder;
+ }
 
