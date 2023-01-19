@@ -1,0 +1,22 @@
+
+.div-item{
+    display: flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+}
+
+.div-item button{
+    width: 30px;
+}
+
+.div-item h1{
+    font-size: 18px;
+    display: block;
+}
+
+.img{
+    object-fit: scale-down;
+    width: 100px;
+    height: 150px;
+}
