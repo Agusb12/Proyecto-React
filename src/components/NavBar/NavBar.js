@@ -7,11 +7,11 @@ function  NavBar ({li1,li2,li3}) {
                 <ul>
                 <CartWidget/>
                     <div className="h1-div">   
-                        <h1>PHONE FIXERS</h1>
+                        <h1>FAST FOOD</h1>
                     </div>   
-                <li>{li1}</li>
-                <li>{li2}</li>
-                <li>{li3}</li>                
+                <li><a>{li1}</a></li>
+                <li><a>{li2}</a></li>
+                <li><a>{li3}</a></li>                
             </ul>
         </nav>
     )

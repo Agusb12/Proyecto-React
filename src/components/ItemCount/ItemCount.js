@@ -1,23 +1,27 @@
 import './ItemCount.css';
 import {useState,useEffect} from 'react';
-const ItemCount = ({children})=>{
+const ItemCount = ()=>{
     useEffect(()=>{
         console.log("Inicio de montaje")
     },[])
     const  [contador,setContador] = useState(1)
+    const [time,setTime] = useState("")
     const addNumber = ()=>{
-        setContador(contador + 1)
+        setContador((prevContador)=>prevContador +1);   
+        setTime(()=>console.log(new Date().toLocaleTimeString()))  
     }
+
     const restNumber = ()=>{
-        setContador(contador - 1)
+        setContador((prevContador)=>prevContador < 1 ? prevContador  -1 : 1); 
     }
+
     return(
-        <div>
-            <button onClick = {addNumber()}>+</button>
+        <div className='card-count'>
+            <button onClick = {addNumber}>+</button>
             <p>{contador}</p>
-            <button onCLick = {restNumber()}>-</button>
+            <p>{time}</p>
+            <button onClick = {restNumber}>-</button>
         </div>    
     )
 }
-
 export default ItemCount;

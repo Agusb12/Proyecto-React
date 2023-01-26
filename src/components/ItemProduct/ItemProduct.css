@@ -4,10 +4,10 @@
     flex-direction:column;
     justify-content: center;
     align-items: center;
-}
-
-.div-item button{
-    width: 30px;
+    margin: 30px auto;
+    width: 25%;
+    background-color: silver;
+ 
 }
 
 .div-item h1{

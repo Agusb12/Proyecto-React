@@ -17,7 +17,8 @@
    font-weight: bolder;
    box-shadow: 1px 5px 5px black;
    font-family: 'Oswald', sans-serif;
-   color: white;
+   color:b black;
+   text-decoration: double;
  }
 
  .div-nav ul li{
@@ -26,11 +27,11 @@
  }
 
  .h1-div{
-  box-shadow: 1px 5px 5px black;
   height: 100%;
-  width: 10%;
   display: flex;
-  background-color: #444;
+  align-items: center;
+  background-color: white;
+  
  }
 
 
