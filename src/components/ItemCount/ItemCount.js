@@ -8,7 +8,10 @@ const ItemCount = ()=>{
     const [time,setTime] = useState("")
     const addNumber = ()=>{
         setContador((prevContador)=>prevContador +1);   
-        setTime(()=>console.log(new Date().toLocaleTimeString()))  
+        setTime( (prevTime)=>{
+            prevTime = new Date().toLocaleDateString;
+            return prevTime; 
+        }) 
     }
 
     const restNumber = ()=>{
