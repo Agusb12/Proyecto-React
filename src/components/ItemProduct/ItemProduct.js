@@ -1,5 +1,6 @@
 import './ItemProduct.css';
 import ItemCount from '../ItemCount/ItemCount';
+
 const ItemProduct = ({data})=>{
     return(
         <div className="div-item">

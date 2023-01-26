@@ -1,7 +1,7 @@
 import {useState,useEffect} from 'react'
-import itemProduct from '../ItemProduct/ItemProduct';
 import './itemListContainer.css'
 import products from '../../utils/ProductsMock';
+import ItemList from '../ItemList/itemList';
 
 const ItemListContainer = ()=>{  
     const [listProducts,setListProducts] = useState([]);
@@ -9,8 +9,7 @@ const ItemListContainer = ()=>{
         setTimeout( ()=>{
             resolve(products);
             reject(new Error);
-        },3000);
-         
+        },3000);      
     })
     useEffect( ()=>{
         productsPromise
@@ -27,10 +26,9 @@ const ItemListContainer = ()=>{
             console.log("La promesa se realizo con exito")
         })
     },[])
-   
     return(
         <div className='List-product'>
-           {listProducts.map( (product)=> <itemList data = {product}/> )}
+           <ItemList dataProducts = {listProducts}/>
         </div>
     )
 }
