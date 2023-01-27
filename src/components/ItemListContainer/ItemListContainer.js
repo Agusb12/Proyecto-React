@@ -9,7 +9,7 @@ const ItemListContainer = ()=>{
         setTimeout( ()=>{
             resolve(products);
             reject(new Error);
-        },3000);      
+        },250);      
     })
     useEffect( ()=>{
         productsPromise

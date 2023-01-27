@@ -1,22 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@100&family=Oswald&family=Sofia+Sans+Condensed:wght@100&display=swap');
+body{  
+    font-family: 'Kanit', sans-serif;
+}
 
 .div-item{
     display: flex;
-    flex-direction:column;
+    flex-direction: column;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    margin: 30px auto;
+    color: black;
     width: 25%;
-    background-color: silver;
- 
+    margin: 30px;
+    height: 250px;
+    font-weight: bolder;
+    border: none;
+    border: solid 2px black;
+    outline: 1px solid black;
+    box-shadow: 1px 5px 5px black;
 }
 
 .div-item h1{
-    font-size: 18px;
-    display: block;
-}
-
-.img{
-    object-fit: scale-down;
-    width: 100px;
-    height: 150px;
+display: block;
 }

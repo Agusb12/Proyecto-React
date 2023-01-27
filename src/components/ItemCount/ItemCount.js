@@ -15,7 +15,7 @@ const ItemCount = ()=>{
     }
 
     const restNumber = ()=>{
-        setContador((prevContador)=>prevContador < 1 ? prevContador  -1 : 1); 
+        setContador((prevContador)=>prevContador > 1 ? prevContador  -1 : 1); 
     }
 
     return(
