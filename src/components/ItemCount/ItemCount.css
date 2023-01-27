@@ -6,7 +6,7 @@
     flex-direction:row;
     justify-content: space-evenly;
     border:none;
-    padding: 10px;   
+    padding: 10px;  
 }
 
 .card-count button{
@@ -25,5 +25,6 @@
 .card-count p{
     position: relative;
     left: 18px;
+    color:black;
 }
 
