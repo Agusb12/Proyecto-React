@@ -11,15 +11,16 @@ body{
     align-items: center;
     color: black;
     width: 25%;
-    margin: 30px;
-    height: 250px;
+    margin: 100px auto;
+    height: 350px;
     font-weight: bolder;
     border: none;
     border: solid 2px black;
-    outline: 1px solid black;
     box-shadow: 1px 5px 5px black;
 }
 
-.div-item h1{
-display: block;
+.div-item img{
+    object-fit: scale-down;
+    width:50%;
+    height: 200px;
 }

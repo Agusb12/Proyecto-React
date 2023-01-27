@@ -1,5 +1,6 @@
 import './ItemCount.css';
 import {useState,useEffect} from 'react';
+import {FiShoppingCart} from 'react-icons/fi'
 const ItemCount = ()=>{
     useEffect(()=>{
         console.log("Inicio de montaje")
@@ -24,6 +25,9 @@ const ItemCount = ()=>{
             <p>{contador}</p>
             <p>{time}</p>
             <button onClick = {restNumber}>-</button>
+            <FiShoppingCart/>
+            <h2>Agregar al carrito</h2>
+                
         </div>    
     )
 }

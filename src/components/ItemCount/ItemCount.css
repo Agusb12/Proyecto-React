@@ -1,22 +1,29 @@
 .card-count{
     width: 100%;
-    background-color: inherit;
     color: black;
     height: 50px; 
     display: flex;
     flex-direction:row;
-    justify-content: space-between;
+    justify-content: space-evenly;
     border:none;
-    border-bottom: solid 2px black;
-    
+    padding: 10px;   
 }
 
 .card-count button{
     padding: 10px;
+    border: none;
+    width: 60px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    background-color: black;
 }
 
 .card-count p{
     position: relative;
-    top: 7px;
-    right: -45px;
+    left: 18px;
 }
+
