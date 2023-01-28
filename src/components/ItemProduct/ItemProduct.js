@@ -1,7 +1,6 @@
 import './ItemProduct.css';
 import ItemCount from '../ItemCount/ItemCount';
 import {FiShoppingCart} from 'react-icons/fi'
-
 const ItemProduct = ({data})=>{
     return(
         <div className="div-item">
@@ -11,8 +10,8 @@ const ItemProduct = ({data})=>{
             <span>${data.price}</span>
             <ItemCount/>
             <FiShoppingCart/>
-            <p>Agregar al carrito</p>               
-    </div>
+            <button className='cart-button'>Agregar al carrito</button>                           
+        </div>
     )
 }
 export default ItemProduct;

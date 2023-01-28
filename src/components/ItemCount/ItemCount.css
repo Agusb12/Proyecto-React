@@ -22,9 +22,14 @@
     background-color: black;
 }
 
+.card-count button:focus{
+    color: black;
+    background-color:white;
+    
+}
 .card-count p{
     position: relative;
-    left: 18px;
     color:black;
+    left: 6px;
 }
 

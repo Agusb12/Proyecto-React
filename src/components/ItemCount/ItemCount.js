@@ -14,7 +14,6 @@ const ItemCount = ()=>{
             return prevTime; 
         }) 
     }
-
     const restNumber = ()=>{
         setContador((prevContador)=>prevContador > 1 ? prevContador  -1 : 1); 
     }

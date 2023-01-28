@@ -4,5 +4,4 @@ const itemList = ({dataProducts})=>{
         dataProducts.map( (product)=> <ItemProduct key = {product.id} data = {product}/> )
     )
 }
-
 export default itemList;

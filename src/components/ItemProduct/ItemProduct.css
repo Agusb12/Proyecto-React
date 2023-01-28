@@ -6,7 +6,6 @@ body{
 .div-item{
     display: flex;
     flex-direction: column;
-    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     color: black;
@@ -23,5 +22,22 @@ body{
     object-fit: scale-down;
     width:50%;
     height: 200px;
+}
+
+.cart-button{
+    background-color: black;
+    color: white;
+    outline: none;
+    padding: 15px;
+    margin: 6px;
+    border:none;
+    border-radius: 15px;
+}
+
+.cart-button:hover{
+    background-color: white;
+    color: black;
+    box-shadow: 1px 5px 5px black;
+    transition: 1s;
 }
 
