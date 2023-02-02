@@ -11,3 +11,9 @@
   border:solid 2px #65bc;
   
 }
+
+.div-container{
+  display: flex;
+  flex-wrap: wrap;
+ 
+}

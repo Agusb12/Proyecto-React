@@ -4,22 +4,23 @@
     height: 50px; 
     display: flex;
     flex-direction:row;
-    justify-content: space-evenly;
-    border:none;
+    justify-content: center;
+    align-items: center;
     padding: 10px;  
 }
 
 .card-count button{
     padding: 10px;
     border: none;
-    width: 60px;
+    width: 45%;
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     color: white;
     background-color: black;
+    margin: 10px;
 }
 
 .card-count button:focus{
@@ -28,8 +29,7 @@
     
 }
 .card-count p{
-    position: relative;
     color:black;
-    left: 6px;
+
 }
 

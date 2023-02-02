@@ -2,6 +2,7 @@ import {useState,useEffect} from 'react'
 import './itemListContainer.css'
 import products from '../../utils/ProductsMock';
 import ItemList from '../ItemList/itemList';
+import ItemDetailContainer from '../itemDetailContainer/itemDetailContainer';
 
 const ItemListContainer = ()=>{  
     const [listProducts,setListProducts] = useState([]);
@@ -14,7 +15,6 @@ const ItemListContainer = ()=>{
     useEffect( ()=>{
         productsPromise
         .then( (resolve)=>{
-            console.log("Productos:",resolve);
             setListProducts(resolve);
         })
 
@@ -23,7 +23,7 @@ const ItemListContainer = ()=>{
         })
 
         .finally( ()=>{
-            console.log("La promesa se realizo con exito")
+           
         })
     },[])
     return(

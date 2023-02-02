@@ -3,7 +3,7 @@ import {useState,useEffect} from 'react';
 
 const ItemCount = ()=>{
     useEffect(()=>{
-        console.log("Inicio de montaje")
+        
     },[])
     const  [contador,setContador] = useState(1)
     const [time,setTime] = useState("")
