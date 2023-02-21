@@ -1,31 +1,30 @@
 import './ItemCount.css';
-import {useState,useEffect} from 'react';
-
-const ItemCount = ()=>{
-    useEffect(()=>{
-        
-    },[])
-    const  [contador,setContador] = useState(1)
-    const [time,setTime] = useState("")
-    const addNumber = ()=>{
-        setContador((prevContador)=>prevContador +1);   
-        setTime( (prevTime)=>{
-            prevTime = new Date().toLocaleDateString;
-            return prevTime; 
-        }) 
+import {useState} from 'react';
+import { CartContext } from '../../context/CartContext';
+import { useContext } from 'react';
+const ItemCount = ({setQuantitySelected,productData})=>{
+    const {addProductToCart} = useContext(CartContext)
+    const [CountQuantity,setCountQuantity] = useState(1)
+    const addCount = ()=>{
+        setCountQuantity((prevCountQuantity)=>prevCountQuantity +1);       
     }
-    const restNumber = ()=>{
-        setContador((prevContador)=>prevContador > 1 ? prevContador  -1 : 1); 
+        const restCount = ()=>{
+            setCountQuantity((prevCountQuantity)=>prevCountQuantity > 1 ? prevCountQuantity  -1 : 1); 
+    }
+    const onAdd = ()=>{
+        setQuantitySelected(CountQuantity);
+        addProductToCart([productData])
     }
 
     return(
+        <> 
         <div className='card-count'>
-            <button onClick = {addNumber}>+</button>
-            <p>{contador}</p>
-            <p>{time}</p>
-            <button onClick = {restNumber}>-</button>
-         
-        </div>    
+            <button onClick = {addCount}>+</button>
+            <p>{CountQuantity}</p>
+            <button onClick = {restCount}>-</button>
+        </div>   
+        <button onClick={onAdd}>Compre aqui</button> 
+        </>
     )
 }
 export default ItemCount;
