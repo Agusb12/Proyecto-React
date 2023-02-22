@@ -4,7 +4,6 @@ const Detail = ()=>{
     return(
         <>
         <ItemDetailContainer/>
-        
         </>
     )
 }
