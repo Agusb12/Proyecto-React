@@ -37,6 +37,7 @@ function App() {
                 })}
           </div> */}
     </div>
+    <ItemListContainer/>
   </BrowserRouter>    
   );
 }
