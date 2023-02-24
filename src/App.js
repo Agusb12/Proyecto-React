@@ -8,9 +8,9 @@ import CartProvider from './context/CartContext';
 function App() {
 
     return (
-  <CartProvider> 
-    <BrowserRouter> 
       <div className="App">
+      <CartProvider> 
+        <BrowserRouter> 
         <NavBar li1 = "Inicio" li2 = "Formulario" li3 = "Contacto" />
       <Routes>
         <Route path='/' element = {<Home/>}/>
@@ -18,8 +18,8 @@ function App() {
         <Route path="/:producto/:id" element = {<Detail/>}/>   
         <Route path="/cart" element = {<cart/>}/>   
       </Routes>    
-     <BrowserRouter/> 
-    <CartProvider/>   
+     </BrowserRouter> 
+    </CartProvider>   
     </div>
     )}
 export default App;

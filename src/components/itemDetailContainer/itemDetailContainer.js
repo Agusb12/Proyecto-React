@@ -4,7 +4,7 @@ import products from "../../utils/ProductsMock";
 import { useParams } from "react-router-dom";
 import './itemDetailContainer.css'
 const ItemDetailContainer = ()=>{
-    const {ProductData,setProductData} = useState({})
+    const [ProductData,setProductData] = useState({})
     const {id} = useParams();
     useEffect( ()=>{
         filterById()
@@ -20,7 +20,7 @@ const ItemDetailContainer = ()=>{
     return(
         <div>
             {}
-            <ItemDetail data = {productData}/>
+            <ItemDetail data = {ProductData}/>
         </div>
     )
 }
