@@ -1,4 +1,3 @@
-
 import './App.css';
 import NavBar from './components/NavBar/NavBar';
 import {BrowserRouter,Routes,Route} from 'react-router-dom';
@@ -19,11 +18,9 @@ function App() {
         <Route path="/:producto/:id" element = {<Detail/>}/>   
         <Route path="/cart" element = {<cart/>}/>   
       </Routes>    
-        
+     <BrowserRouter/> 
+    <CartProvider/>   
     </div>
-    </BrowserRouter>
-  </CartProvider>     
-  );
-}
+    )}
 export default App;
 

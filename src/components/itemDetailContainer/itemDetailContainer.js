@@ -4,7 +4,7 @@ import products from "../../utils/ProductsMock";
 import { useParams } from "react-router-dom";
 import './itemDetailContainer.css'
 const ItemDetailContainer = ()=>{
-    const [productData,setProductData] = useState({});
+    const {ProductData,setProductData} = useState({})
     const {id} = useParams();
     useEffect( ()=>{
         filterById()

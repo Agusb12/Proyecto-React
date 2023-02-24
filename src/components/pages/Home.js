@@ -1,8 +1,8 @@
-import ItemListContainer from "../ItemListContainer/itemListContainer";
+import itemListContainer from "../ItemListContainer/itemListContainer";
 const Home = ()=>{
     return(
         <div className='div-container'>
-            <ItemListContainer/>   
+            <itemListContainer/> 
           </div>
     )
 }

@@ -1,10 +1,13 @@
 import {useState,useEffect} from 'react'
-import './itemListContainer.css'
+import './ItemListContainer.css'
 import products from '../../utils/ProductsMock';
 import ItemList from '../ItemList/itemList';
+<<<<<<< HEAD
+=======
 import { useContext } from 'react';
 import { CartContext } from '../../context/CartContext';
 import Loading from '../loading';
+>>>>>>> 06dc5264ad096ee03c81c370f4ccf6bf58dc9972
 
 const ItemListContainer = ()=>{  
     // console.log("informacion de contexto", useContext(CartContext))
