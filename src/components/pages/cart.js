@@ -1,5 +1,5 @@
 
-const cart =()=>{
+const Cart =()=>{
     return(
         <div>
         <p>Monto final</p>
@@ -7,4 +7,4 @@ const cart =()=>{
     )
 }
 
-export default cart;
+export default Cart;

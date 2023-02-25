@@ -4,8 +4,11 @@ import { Link } from 'react-router-dom';
 import { useContext } from 'react';
 import { CartContext } from '../../context/CartContext';
 const ItemProduct = ({data})=>{
-    const {name,setName,handleClick} = useContext(CartContext);
+    const {addProductToCart} = useContext(CartContext);
     const {id,title,image,price} = data
+    const addToCart = ()=>{
+        addProductToCart(data)
+    }
     return(
         <div className="div-item">
             <h1>{title}</h1>
@@ -16,7 +19,7 @@ const ItemProduct = ({data})=>{
             <FiShoppingCart/>
             <button  className='cart-button'>Agregar al carrito</button>
             <Link to={`/productos/${id}`}>
-            <button className='seeMore'>Ver detalles</button>
+            <button onClick = {addToCart} className='seeMore'>Ver detalles</button>
             </Link>                            
         </div>
     )

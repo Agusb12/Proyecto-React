@@ -3,17 +3,21 @@ import { createContext,useState } from "react";
 const CartContext = createContext()
 
 const CartProvider = ({children}) => {
-
-    const  {cartProducts,setCartProducts} = useState([])
-
+    const [modal,setModal] = useState(false)
+    const  [cartProducts,setCartProducts] = useState([])
     const addProductToCart = (product)=>{
-        setCartProducts(...cartProducts,product)
+        setCartProducts(cartProducts => [...cartProducts,product])
     }
+ 
     const data = {
         cartProducts,
         setCartProducts,
-        addProductToCart
-    }
+        addProductToCart,
+        modal,
+        setModal
+        
+    };
+
     return(
         <CartContext.Provider value = {data}>
             {children}

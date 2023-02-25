@@ -2,7 +2,7 @@ import './ItemCount.css';
 import {useState} from 'react';
 import { CartContext } from '../../context/CartContext';
 import { useContext } from 'react';
-const ItemCount = ({setQuantitySelected,productData})=>{
+const ItemCount = ({setQuantitySelected,DataProduct})=>{
     const {addProductToCart} = useContext(CartContext)
     const [CountQuantity,setCountQuantity] = useState(1)
     const addCount = ()=>{
@@ -10,11 +10,15 @@ const ItemCount = ({setQuantitySelected,productData})=>{
     }
         const restCount = ()=>{
             setCountQuantity((prevCountQuantity)=>prevCountQuantity > 1 ? prevCountQuantity  -1 : 1); 
+
     }
+   
     const onAdd = ()=>{
         setQuantitySelected(CountQuantity);
-        addProductToCart([productData]);
+        addProductToCart(DataProduct);
+        console.log(DataProduct)
     }
+    
 
     return(
         <> 

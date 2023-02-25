@@ -2,9 +2,7 @@ import {useState,useEffect} from 'react'
 import './ItemListContainer.css'
 import products from '../../utils/ProductsMock';
 import ItemList from '../ItemList/itemList';
-import { useContext } from 'react';
-import { CartContext } from '../../context/CartContext';
-import Loading from '../loading';
+
 
 
 const ItemListContainer = ()=>{  
@@ -36,8 +34,8 @@ const ItemListContainer = ()=>{
         <div className='List-product'>
            <ItemList dataProducts = {listProducts}/>
         </div>
-           <button onClick={()=>setLoader(true)}>click me</button>
-           {loader? <Loading/> : "there is nothing loading..."}
+           {/* <button onClick={()=>setLoader(true)}>click me</button>
+           {loader? <Loading/> : "there is nothing loading..."} */}
            </> 
     )
 }

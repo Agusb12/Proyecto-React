@@ -5,8 +5,8 @@ function  NavBar ({li1,li2,li3}) {
   
     return(
         <nav className="div-nav">
+                
                 <ul>
-                <CartWidget/>
                     <div className="h1-div">   
                         <h1>FAST FOOD</h1>
                     </div>
@@ -14,7 +14,9 @@ function  NavBar ({li1,li2,li3}) {
                         <li>{li1}</li>    
                     </Link>
                         <li><a>{li2}</a></li>
-                        <li><a>{li3}</a></li>                
+                        <li><a>{li3}</a></li>       
+                        <CartWidget/>
+                            
             </ul>
         </nav>
     )
