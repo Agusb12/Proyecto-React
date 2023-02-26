@@ -6,7 +6,8 @@ const CartProvider = ({children}) => {
     const [modal,setModal] = useState(false)
     const  [cartProducts,setCartProducts] = useState([])
     const addProductToCart = (product)=>{
-        setCartProducts(cartProducts => [...cartProducts,product])
+        setCartProducts(cartProducts => product.id !== product.id? [...cartProducts,product]:
+            [cartProducts])
     }
  
     const data = {
