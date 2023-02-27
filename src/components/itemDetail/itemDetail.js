@@ -7,11 +7,7 @@ import { CartContext } from '../../context/CartContext';
 const ItemDetail = ({data})=>{
     const [quantitySelected,setQuantitySelected] = useState(1)
     const {title,description,price,image} = data;
-    const {cartProducts,addProductToCart} = useContext(CartContext);
-    const pushProduct = ()=>{
-        addProductToCart((product=> [...cartProducts,product]));
-        
-    }
+
     return(
         <>
      <div className='detail-container'>
@@ -26,7 +22,7 @@ const ItemDetail = ({data})=>{
                  <div className='btn-compra'>
                 
                     { 
-                        quantitySelected > 1? <Link to ="/"><button onClick={pushProduct} className='btn-compra-final'>Terminar la compra</button></Link> :<ItemCount setQuantitySelected = {setQuantitySelected} DataProduct = {data}/>
+                        quantitySelected > 1? <Link to ="/"><button className='btn-compra-final'>Terminar la compra</button></Link> :<ItemCount setQuantitySelected = {setQuantitySelected} DataProduct = {data}/>
                     }
                  </div> 
             </div>        

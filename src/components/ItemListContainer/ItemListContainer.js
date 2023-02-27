@@ -26,7 +26,7 @@ const ItemListContainer = ()=>{
         })
 
         .finally( ()=>{
-            console.log(listProducts);
+            ""
         })
     },[])
     return(

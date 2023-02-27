@@ -17,9 +17,9 @@ const ItemProduct = ({data})=>{
             </div>
             <span>${price}</span>
             <FiShoppingCart/>
-            <button  className='cart-button'>Agregar al carrito</button>
+            <button onClick={addToCart}  className='cart-button'>Agregar al carrito</button>
             <Link to={`/productos/${id}`}>
-            <button onClick = {addToCart} className='seeMore'>Ver detalles</button>
+            <button className='seeMore'>Ver detalles</button>
             </Link>                            
         </div>
     )

@@ -8,8 +8,28 @@
     position: fixed;
     z-index: 1;
     flex-wrap:wrap ;
+    overflow: scroll;
 }
 
 .close-modal{
-    color: black;
+    background-color: indianred;
+    color: white;
+    padding: 13px;
+    border: solid 1 px indianred;
+    border-radius: 30px;
+    height: 16px;
+    display: flex;
+    align-items: center;
+    margin: -8px;
+    
+}
+
+.modal.container{
+    margin: 5px;
+    display: flex;
+    flex-direction: row;
+}
+
+.delete-icon{
+    display: block;
 }
