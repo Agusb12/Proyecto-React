@@ -5,15 +5,16 @@ import {FiArchive} from "react-icons/fi"
 import "./Modal.css"
 const Modal = ()=>{
     const {modal,setModal} = useContext(CartContext)
-    const {cartProducts} = useContext(CartContext);
+    const {addProductToCart,cartProducts,setCartProducts} = useContext(CartContext);
     const closeModal = ()=>{
         setModal(false)
     }
     const deleteItems = ()=>{
-        cartProducts.pop()
+        setCartProducts([])
     }
+    
     return(
-
+       
         <div className="Modal-div">
             <p className="close-modal" onClick={closeModal}>X</p>
             {cartProducts.map( (product)=>{

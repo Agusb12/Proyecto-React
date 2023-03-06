@@ -9,6 +9,7 @@
     z-index: 1;
     flex-wrap:wrap ;
     overflow: scroll;
+    padding: 7px; 
 }
 
 .close-modal{

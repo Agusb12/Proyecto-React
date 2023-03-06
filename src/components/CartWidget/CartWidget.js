@@ -4,11 +4,13 @@ import { useContext } from "react";
 import { CartContext } from "../../context/CartContext";
 import Modal from "../../Modal/Modal";
 const CartWidget = ()=>{   
-const {modal,setModal} = useContext(CartContext)
+const {modal,setModal,totalProducts,cartProducts} = useContext(CartContext)
     return(
         <div>
+            {cartProducts.length !== 0 && <p>{totalProducts}</p>}
             <FiShoppingCart onClick={()=>setModal(true)}/>
-            {modal && <Modal/>}      
+            {modal && <Modal/>}
+                  
         </div>
     )
 }

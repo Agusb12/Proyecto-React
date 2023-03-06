@@ -26,10 +26,7 @@ const ItemDetail = ({data})=>{
                     }
                  </div> 
             </div>        
-         </div>
-        
-         
-         
+         </div>    
          </>
     )
 }
