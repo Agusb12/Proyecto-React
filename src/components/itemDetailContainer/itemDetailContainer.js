@@ -3,20 +3,26 @@ import ItemDetail from "../itemDetail/itemDetail"
 import products from "../../utils/ProductsMock";
 import { useParams } from "react-router-dom";
 import './itemDetailContainer.css'
+//FIREBASE
+import db from '../../firebaseConfig';
+import {doc,getDoc} from "firebase/firestore"
 const ItemDetailContainer = ()=>{
     const [ProductData,setProductData] = useState({})
     const {id} = useParams();
     useEffect( ()=>{
-        filterById()
-    },[id]);
-    const filterById = ()=>{
-        products.some( (product)=>{
-            if (product.id == id){
-                setProductData(product);
-            }     
+        getProduct()
+        .then( (res)=>{
+            setProductData(res);
         })
-    }
+    },[id]);
    
+    const getProduct = async ()=>{
+        const docRef = doc(db,"productos",id)
+        const docSnapshot = await getDoc(docRef)
+        let product = docSnapshot.data()
+        product.id = docSnapshot.id
+        return product
+    }
     return(
         <div>
             {}

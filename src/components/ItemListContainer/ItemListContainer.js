@@ -25,27 +25,11 @@ const ItemListContainer = ()=>{
         .then((res) => {
             setListProducts(res)
         })
-    //     getProdcuts
-    //     .then( (resolve)=>{
-    //         setListProducts(resolve);
-    //     })
-
-    //     .catch((error)=>{
-    //         console.log(error)
-    //     })
-
-    //     .finally( ()=>{
-    //         ""
-    //     })
     },[])
-    return(
-        <> 
+    return( 
         <div className='List-product'>
            <ItemList dataProducts = {listProducts}/>
-        </div>
-           {/* <button onClick={()=>setLoader(true)}>click me</button>
-           {loader? <Loading/> : "there is nothing loading..."} */}
-           </> 
+        </div>     
     )
 }
 export default ItemListContainer;
