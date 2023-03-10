@@ -6,6 +6,7 @@ import Contact from './components/pages/Contact';
 import Detail from './components/pages/Details';
 import Cart from './components/pages/cart';
 import CartProvider from './context/CartContext';
+import ItemListContainer from './components/ItemListContainer/ItemListContainer';
 function App() {
 
     return (
@@ -19,7 +20,8 @@ function App() {
         <Route path="/:producto/:id" element = {<Detail/>}/>   
         <Route path="/cart" element = {<Cart/>}/>   
       </Routes>    
-     </BrowserRouter> 
+     </BrowserRouter>
+    <ItemListContainer/> 
     </CartProvider>   
     </div>
     )}

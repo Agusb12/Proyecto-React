@@ -1,15 +1,15 @@
 .Modal-div{
     background-color: white;
-    height: 300px ;
-    width: 150px;
-    display: flex;
+    height: 400px;
+    width: 180px;
     border:solid 1px gray;
-    padding: 15px;
     position: fixed;
+    right: 10px ;
     z-index: 1;
     flex-wrap:wrap ;
-    overflow: scroll;
-    padding: 7px; 
+    overflow: auto;
+    padding: 7px;
+    margin:10px;
 }
 
 .close-modal{
@@ -17,20 +17,28 @@
     color: white;
     padding: 13px;
     border: solid 1 px indianred;
-    border-radius: 30px;
+    border-radius: 25px;
     height: 16px;
     display: flex;
     align-items: center;
-    margin: -8px;
+    margin: 6px 6px;
+    display: inline;
+    border: none;
+    outline: none;
     
 }
 
-.modal.container{
-    margin: 5px;
-    display: flex;
-    flex-direction: row;
+.modal-container{
+    margin: 20px;
+    display: inline-block;
+    flex-wrap: wrap;
+    padding: 10px;
+    border-bottom: solid 2px gray;
+    width: 100px;
+    
 }
-
-.delete-icon{
-    display: block;
+.modal-container img{
+    object-fit: cover;
+    width: inherit;
+    height: 120px;
 }

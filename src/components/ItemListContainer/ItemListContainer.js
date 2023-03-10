@@ -1,33 +1,42 @@
 import {useState,useEffect} from 'react'
 import './ItemListContainer.css'
-import products from '../../utils/ProductsMock';
 import ItemList from '../ItemList/itemList';
-
+import { collection,getDocs } from 'firebase/firestore';
+import db from '../../firebaseConfig';
 
 
 const ItemListContainer = ()=>{  
     // console.log("informacion de contexto", useContext(CartContext))
     const [listProducts,setListProducts] = useState([]);
-    const [loader,setLoader] = useState(false)
-    const productsPromise = new Promise( (resolve,reject)=>{
-        setTimeout( ()=>{
-            resolve(products);
-            reject(new Error);
-        },250);      
-    })
+    
+    const getProducts = async ()=>{
+        const productCollection = collection(db,'Productos');
+        const productSnapshot = await getDocs(productCollection);
+        const productList = productSnapshot.docs.map( (doc)=>{
+            let product = doc.data()
+            product.id = doc.id
+            return product
+        })
+        return productList
+    }
+
     useEffect( ()=>{
-        productsPromise
-        .then( (resolve)=>{
-            setListProducts(resolve);
+        getProducts()
+        .then((res) => {
+            setListProducts(res)
         })
+    //     getProdcuts
+    //     .then( (resolve)=>{
+    //         setListProducts(resolve);
+    //     })
 
-        .catch((error)=>{
-            console.log(error)
-        })
+    //     .catch((error)=>{
+    //         console.log(error)
+    //     })
 
-        .finally( ()=>{
-            ""
-        })
+    //     .finally( ()=>{
+    //         ""
+    //     })
     },[])
     return(
         <> 
