@@ -19,13 +19,15 @@ const ItemDetailContainer = ()=>{
     const getProduct = async ()=>{
         const docRef = doc(db,"productos",id)
         const docSnapshot = await getDoc(docRef)
-        let product = docSnapshot.data()
-        product.id = docSnapshot.id
-        return product
+            let product = docSnapshot.data()
+            product.id = docSnapshot.id
+            console.log(id)
+            return product;
     }
+    getProduct();
     return(
         <div>
-            {}
+            
             <ItemDetail data = {ProductData}/>
         </div>
     )
